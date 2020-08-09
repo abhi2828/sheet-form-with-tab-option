@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .row h2{
+            text-align: center;
+        }
+        .container{
+            border: 1px solid #cdd4da;
+        }
+        .btn-primary{
+            margin-left: 15px;
+        }
+        form{
+            background-color: hsl(210deg 7% 95%);
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js">
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="abc()">
+   <section>
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#form1" data-toggle="tab">Main Entry </a></li>
+                    <li class=""><a href="#form2" data-toggle="tab">ActualSoD</a></li>
+                    <li class=""><a href="#form3" data-toggle="tab">ActualEoD</a></li>
+                    <li class=""><a href="#form4" data-toggle="tab">Cash In Transit</a></li>
+                  </ul>
+               </div>
+           </div>
+       </div>
+   </section>
+     <section>
+         <div class="container">
+              <!-- form 1 -->
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="form1">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2> Form for Main Entry </h2>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="UNIQUE ID">UNIQUE ID</label>
+                    <input type="number" class="form-control" id="input1" placeholder="UNIQUE ID" readonly> 
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="TimeStamp">TimeStamp</label>
+                    <input type="text" class="form-control" id="input2" placeholder="TimeStamp" readonly>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="DATE">DATE</label>
+                    <input type="text" class="form-control" id="input3" placeholder="DATE" readonly>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="LOCATION">LOCATION</label>
+                    <input type="text" class="form-control" id="input4" placeholder="LOCATION">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="CASH FROM LFSL">CASH FROM LFSL</label>
+                    <input type="text" class="form-control" id="input5" placeholder="CASH FROM LFSL">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="Image / PDF: ">Image / PDF: </label>
+                    <input type="file" class="form-control" id="input6" placeholder="Image / PDF: ">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="CASH FROM MANAGER">CASH FROM MANAGER</label>
+                      <input type="text" class="form-control" id="input7" placeholder="CASH FROM MANAGER">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input8" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="CASH FROM OTHER">CASH FROM OTHER</label>
+                      <input type="text" class="form-control" id="input9" placeholder="CASH FROM OTHER">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input10" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - SENT TRANS. - (MONEYGRAM)">LFSL - SENT TRANS. - (MONEYGRAM)</label>
+                      <input type="text" class="form-control" id="input11" placeholder="LFSL - SENT TRANS. - (MONEYGRAM)">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input12" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - SENT TRANS. - (RIA)">LFSL - SENT TRANS. - (RIA)</label>
+                      <input type="text" class="form-control" id="input13" placeholder="LFSL - SENT TRANS. - (RIA)">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input14" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - CREDIT CARD - LASCO PAY(CASH - IN)">LFSL - CREDIT CARD - LASCO PAY(CASH - IN)</label>
+                      <input type="text" class="form-control" id="input15" placeholder="LFSL - CREDIT CARD - LASCO PAY(CASH - IN)">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input16" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - CREDIT CARD - LASCO PAY(CASH - OUT)">LFSL - CREDIT CARD - LASCO PAY(CASH - OUT)</label>
+                      <input type="text" class="form-control" id="input17" placeholder="LFSL - CREDIT CARD - LASCO PAY(CASH - OUT)">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input18" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - BILL PAYMENT - LASCO BILL PAY">LFSL - BILL PAYMENT - LASCO BILL PAY</label>
+                      <input type="text" class="form-control" id="input19" placeholder="LFSL - BILL PAYMENT - LASCO BILL PAY">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input20" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - REC.TRANS. - (MONEYGRAM)">LFSL - REC.TRANS. - (MONEYGRAM)</label>
+                      <input type="text" class="form-control" id="input21" placeholder="LFSL - REC.TRANS. - (MONEYGRAM)">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input22" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - REC TRANS. - (RIA)">LFSL - REC TRANS. - (RIA)</label>
+                      <input type="text" class="form-control" id="input23" placeholder="LFSL - REC TRANS. - (RIA)">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input24" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="LFSL - WE CARE">LFSL - WE CARE</label>
+                      <input type="text" class="form-control" id="input25" placeholder="LFSL - WE CARE">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Image / PDF: ">Image / PDF: </label>
+                      <input type="file" class="form-control" id="input26" placeholder="Image / PDF: ">
+                    </div>
+                  </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                      <button type="button" class="btn btn-primary">Sumbit</button>
+                    </div>                  
+                  </div>
+                  <br>
+              </form>
+        </div>
+
+
+        <!-- form 2 -->
+       
+        <div class="tab-pane fade" id="form2">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2> Form for ActualSoD </h2>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="UNIQUE ID">UNIQUE ID</label>
+                    <input type="number" class="form-control" id="input1Form2" placeholder="UNIQUE ID" readonly>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="TimeStamp">TimeStamp</label>
+                    <input type="text" class="form-control" id="input2Form2" placeholder="TimeStamp" readonly>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="DATE">DATE</label>
+                    <input type="text" class="form-control" id="input3Form2" placeholder="DATE" readonly>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="LOCATION">LOCATION</label>
+                    <input type="text" class="form-control" id="input4Form2" placeholder="LOCATION">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="EMAIL">USER EMAIL</label>
+                    <input type="text" class="form-control" id="input5Form2" placeholder="USER EMAIL">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$1,000">$1,000</label>
+                      <input type="text" class="form-control" id="input6Form2" placeholder="$1,000">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="$500">$500</label>
+                    <input type="text" class="form-control" id="input7Form2" placeholder="$500">
+                  </div>                  
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="$100">$100 </label>
+                        <input type="number" class="form-control" id="input8Form2" placeholder="$100 ">
+                      </div>
+                  <div class="form-group col-md-6">
+                    <label for="$50">$50</label>
+                    <input type="text" class="form-control" id="input9Form2" placeholder="$50">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$20">$20</label>
+                      <input type="number" class="form-control" id="input10Form2" placeholder="$20">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="$10">$10</label>
+                    <input type="number" class="form-control" id="input11Form2" placeholder="$10">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$5">$5</label>
+                      <input type="number" class="form-control" id="input12Form2" placeholder="$5">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="1.00">1.00</label>
+                    <input type="number" class="form-control" id="input13Form2" placeholder="1.00">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$USD's">$USD's </label>
+                      <input type="number" class="form-control" id="input14Form2" placeholder="$USD's">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="$CAD's">$CAD's</label>
+                    <input type="number" class="form-control" id="input15Form2" placeholder="$CAD's">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$GBP's">$GBP's </label>
+                      <input type="number" class="form-control" id="input16Form2" placeholder="$GBP's ">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="TOTAL">TOTAL</label>
+                    <input type="number" class="form-control" id="input17Form2" placeholder="TOTAL">
+                  </div>                  
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <button type="button" class="btn btn-primary">Sumbit</button>
+                    </div>                  
+                  </div>
+                  <br>
+              </form>
+        </div>
+            
+
+        <!-- form 3 -->
+        <div class="tab-pane fade" id="form3">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2> Form for Cash In ActualEoD </h2>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="UNIQUE ID">UNIQUE ID</label>
+                    <input type="number" class="form-control" id="input1Form3" placeholder="UNIQUE ID" readonly>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="TimeStamp">TimeStamp</label>
+                    <input type="text" class="form-control" id="input2Form3" placeholder="TimeStamp" readonly>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="DATE">DATE</label>
+                    <input type="text" class="form-control" id="input3Form3" placeholder="DATE" readonly> 
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="LOCATION">LOCATION</label>
+                    <input type="text" class="form-control" id="input4Form3" placeholder="LOCATION">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="EMAIL">USER EMAIL</label>
+                    <input type="text" class="form-control" id="input5Form3" placeholder="USER EMAIL">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$1,000">$1,000</label>
+                      <input type="text" class="form-control" id="input6Form3" placeholder="$1,000">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="$500">$500</label>
+                    <input type="text" class="form-control" id="input7Form3" placeholder="$500">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$100">$100 </label>
+                      <input type="number" class="form-control" id="input8Form3" placeholder="$100 ">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="$50">$50</label>
+                    <input type="text" class="form-control" id="input9Form3" placeholder="$50">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$20">$20</label>
+                      <input type="number" class="form-control" id="input10Form3" placeholder="$20">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="$10">$10</label>
+                    <input type="number" class="form-control" id="input11Form3" placeholder="$10">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$5">$5</label>
+                      <input type="number" class="form-control" id="input12Form3" placeholder="$5">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="1.00">1.00</label>
+                    <input type="number" class="form-control" id="input13Form3" placeholder="1.00">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="$USD's">$USD's </label>
+                      <input type="number" class="form-control" id="input14Form3" placeholder="$USD's">
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="$CAD's">$CAD's</label>
+                    <input type="number" class="form-control" id="input15Form3" placeholder="$CAD's">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="$GBP's">$GBP's </label>
+                    <input type="number" class="form-control" id="input16Form3" placeholder="$GBP's ">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="TOTAL">TOTAL</label>
+                    <input type="number" class="form-control" id="input17Form3" placeholder="TOTAL">
+                  </div> 
+
+                </div>  
+                
+                <div class="row">
+                    <div class="col-md-6">
+                      <button type="button" class="btn btn-primary">Sumbit</button>
+                    </div>                  
+                </div>
+                  <br>
+              </form>
+        </div>
+
+        <!-- form 4 -->
+        <div class="tab-pane fade" id="form4">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2> Form for Cash In Transit : </h2>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="UNIQUE ID">UNIQUE ID</label>
+                    <input type="number" class="form-control" id="input1Form4" placeholder="UNIQUE ID" readonly>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="TimeStamp">TimeStamp</label>
+                    <input type="text" class="form-control" id="input2Form4" placeholder="TimeStamp" readonly>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="Date">Date</label>
+                      <input type="number" class="form-control" id="input3Form4" placeholder="Date" readonly>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="TimeStamp">Location From</label>
+                      <input type="text" class="form-control" id="input4Form4" placeholder="TimeStamp">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="Location To">Location To</label>
+                      <input type="number" class="form-control" id="input5Form4" placeholder="Location To">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="SENDER NAME">SENDER NAME</label>
+                      <input type="text" class="form-control" id="input6Form4Form4" placeholder="SENDER NAME">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="BEARER NAME">BEARER NAME </label>
+                      <input type="number" class="form-control" id="input7Form4" placeholder="BEARER NAME">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="RECEIVER NAME ">RECEIVER NAME </label>
+                      <input type="text" class="form-control" id="input8Form4" placeholder="RECEIVER NAME ">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="Transit amount">Transit amount</label>
+                      <input type="number" class="form-control" id="input9Form4" placeholder="Transit amount">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="Cleared at Destination">Cleared at Destination</label>
+                      <input type="text" class="form-control" id="input10Form4" placeholder="Cleared at Destination">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button type="button" class="btn btn-primary">Sumbit</button>
+                    </div>                  
+                  </div>
+                  <br>
+                </div>              
+              </form>
+        </div>
+      </div>
+         </div>
+     </section>
+
+     <script>
+
+         function abc(){
+            var currentdate = new Date(); 
+    var datetime =  currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() +  "  " +
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+                    $('#input2').val(datetime);
+                    $('#input2Form2').val(datetime);
+                    $('#input2Form3').val(datetime);
+                    $('#input2Form4').val(datetime);
+
+                    var currentdate = new Date(); 
+    var datetime =  currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() 
+                    $('#input3').val(datetime);
+                    $('#input3Form2').val(datetime);
+                    $('#input3Form3').val(datetime);
+                    $('#input3Form4').val(datetime);
+    
+    
+    var GenRandom =  {
+	
+    Stored: [],
+    
+    Job: function(){
+        var newId = Date.now().toString().substr(2); // or use any method that you want to achieve this string
+        
+        if( !this.Check(newId) ){
+            this.Stored.push(newId);
+            return newId;
+        }
+        
+        return this.Job();
+    },
+    
+    Check: function(id){
+        for( var i = 0; i < this.Stored.length; i++ ){
+            if( this.Stored[i] == id ) return true;
+        }
+        return false;
+    }
+    
+};
+
+
+$(function(){
+    for( var i = 0; i < 1; i++ ){
+    }
+    });
+    $('#input1').val(GenRandom.Job());
+    $('#input1Form2').val(GenRandom.Job());
+    $('#input1Form3').val(GenRandom.Job());
+    $('#input1Form4').val(GenRandom.Job());
+         
+    }
+         
+
+     </script>
+</body>
+</html>
